@@ -25,12 +25,12 @@ if(isset($_POST['submit']) OR isset($_GET['remove']) OR isset($_GET['add']) ) {
 	ie the page has called itself with some user input */
 	//first off validate inputs sensible
 
-	if(isset($_POST['CodeMayo']) AND mb_strlen($_POST['CodeMayo'])<4) {
+	if(isset($_POST['CodeMayo']) AND mb_strlen($_POST['CodeMayo'])<0) {
 		$InputError = 1;
 		prnMsg(_('El código del tipo de mayorista no puede estar vacio'),'error');
 	}
 
-	if(isset($_POST['NameMayo']) AND mb_strlen($_POST['NameMayo'])<4) {
+	if(isset($_POST['NameMayo']) AND mb_strlen($_POST['NameMayo'])<0) {
 		$InputError = 1;
 		prnMsg(_('El nombre del tipo de mayorista no puede estar vacio'),'error');
 	}
